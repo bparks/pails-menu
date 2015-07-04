@@ -1,0 +1,11 @@
+{
+	"name": "pails/menu",
+	"autoload": {
+		"files": ["index.php"]
+	},
+	"require": {
+		"pails/pails": "dev-master",
+		"php-activerecord/php-activerecord": "dev-develop",
+		"pails/auth": "dev-master"
+	}
+}

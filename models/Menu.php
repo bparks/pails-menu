@@ -21,7 +21,7 @@ class Menu extends ActiveRecord\Model
 		if ($name == 'menu_items')
 		{
 			if (isset(self::$menu_defs[$this->slug]))
-				return array_merge($this->__menu_items, self::$menu_defs[$this->slug]);
+				return array_merge($this->__menu_items->to_array(), self::$menu_defs[$this->slug]);
 			else
 				return $this->__menu_items;
 		}

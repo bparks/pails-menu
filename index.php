@@ -5,10 +5,13 @@ require_once(__DIR__.'/models/MenuItem.php');
 
 //Controllers and views get included automatically
 
-function menu_config($app)
+class PailsMenu
 {
-	if (defined('ADMIN_MENU_SLUG'))
+	static function initialize()
 	{
-		Menu::add_static_item(ADMIN_MENU_SLUG, 'Menus', '/menu');
+		if (defined('ADMIN_MENU_SLUG'))
+		{
+			Menu::add_static_item(ADMIN_MENU_SLUG, 'Menus', '/menu');
+		}
 	}
 }
